@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d Baskı Noktası | Ödeme Bilgileri</title>
+    <style>
+        body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f9; padding: 20px; }
+        .bank-card { background: white; border: 1px solid #ddd; padding: 20px; margin: 15px auto; max-width: 350px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .iban-text { font-size: 16px; font-family: monospace; letter-spacing: 1px; color: #333; margin: 10px 0; }
+        button { background-color: #28a745; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        button:hover { background-color: #218838; }
+    </style>
+</head>
+<body>
+
+    <h2>3d Baskı Noktası</h2>
+    <p>Ödeme yapmak istediğiniz bankanın IBAN'ını kopyalayabilirsiniz.</p>
+
+    <div class="bank-card">
+        <h3>Garanti BBVA</h3>
+        <p>Alıcı: 3d baskı noktası</p>
+        <p class="iban-text" id="iban1">TR00 0000 0000 0000 0000 0000 01</p>
+        <button onclick="kopyala('iban1')">IBAN Kopyala</button>
+    </div>
+
+    <div class="bank-card">
+        <h3>İş Bankası</h3>
+        <p>Alıcı: 3d baskı noktası</p>
+        <p class="iban-text" id="iban2">TR00 0000 0000 0000 0000 0000 02</p>
+        <button onclick="kopyala('iban2')">IBAN Kopyala</button>
+    </div>
+
+    <script>
+        function kopyala(elementId) {
+            var kopyalanacakMetin = document.getElementById(elementId).innerText;
+            navigator.clipboard.writeText(kopyalanacakMetin).then(function() {
+                alert("IBAN Kopyalandı: " + kopyalanacakMetin);
+            }, function(err) {
+                alert("Kopyalama başarısız oldu!");
+            });
+        }
+    </script>
+
+</body>
+</html>
