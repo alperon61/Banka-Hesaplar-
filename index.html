@@ -3,41 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>3d Baskı Noktası | Ödeme Bilgileri</title>
+    <title>VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ. | Ödeme Bilgileri</title>
     <style>
         body { font-family: Arial, sans-serif; text-align: center; background-color: #f4f4f9; padding: 20px; }
         .bank-card { background: white; border: 1px solid #ddd; padding: 20px; margin: 15px auto; max-width: 350px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .iban-text { font-size: 16px; font-family: monospace; letter-spacing: 1px; color: #333; margin: 10px 0; }
-        button { background-color: #28a745; color: white; border: none; padding: 10px 20px; font-size: 16px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
-        button:hover { background-color: #218838; }
+        .iban-text { font-size: 16px; font-family: monospace; letter-spacing: 1px; color: #333; margin: 10px 0; font-weight: bold; }
+        .button-container { display: flex; gap: 10px; justify-content: center; margin-top: 15px; }
+        button { border: none; padding: 10px 15px; font-size: 14px; border-radius: 5px; cursor: pointer; transition: 0.3s; flex: 1; color: white; font-weight: bold; }
+        .btn-alici { background-color: #007bff; }
+        .btn-alici:hover { background-color: #0056b3; }
+        .btn-iban { background-color: #28a745; }
+        .btn-iban:hover { background-color: #218838; }
+        p { margin: 5px 0; }
     </style>
 </head>
 <body>
 
-    <h2>3d Baskı Noktası</h2>
-    <p>Ödeme yapmak istediğiniz bankanın IBAN'ını kopyalayabilirsiniz.</p>
+    <h2>VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</h2>
+    <p>Ödeme yapmak istediğiniz bankanın bilgilerini kopyalayabilirsiniz.</p>
 
     <div class="bank-card">
         <h3>İş Bankası</h3>
-        <p>Alıcı: VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</p>
+        <p>Alıcı: <span id="alici1">VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</span></p>
         <p class="iban-text" id="iban1">TR26 0006 4000 0017 5030 1267 92</p>
-        <button onclick="kopyala('iban1')">IBAN Kopyala</button>
+        
+        <div class="button-container">
+            <button class="btn-alici" onclick="kopyala('alici1', 'Alıcı Adı')">Alıcı Kopyala</button>
+            <button class="btn-iban" onclick="kopyala('iban1', 'IBAN')">IBAN Kopyala</button>
+        </div>
     </div>
 
     <div class="bank-card">
-        <h3>İş Bankası</h3>
-        <p>Alıcı: VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</p>
-        <p class="iban-text" id="iban2">TR00 0000 0000 0000 0000 0000 02</p>
-        <button onclick="kopyala('iban2')">IBAN Kopyala</button>
+        <h3>Akbank</h3>
+        <p>Alıcı: <span id="alici2">VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</span></p>
+        <p class="iban-text" id="iban2">TR16 0004 6001 0088 8000 0099 84</p>
+        
+        <div class="button-container">
+            <button class="btn-alici" onclick="kopyala('alici2', 'Alıcı Adı')">Alıcı Kopyala</button>
+            <button class="btn-iban" onclick="kopyala('iban2', 'IBAN')">IBAN Kopyala</button>
+        </div>
+    </div>
+
+    <div class="bank-card">
+        <h3>Yapı Kredi</h3>
+        <p>Alıcı: <span id="alici1">VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</span></p>
+        <p class="iban-text" id="iban1">TR76 0006 7010 0000 0065 2695 45</p>
+        
+        <div class="button-container">
+            <button class="btn-alici" onclick="kopyala('alici1', 'Alıcı Adı')">Alıcı Kopyala</button>
+            <button class="btn-iban" onclick="kopyala('iban1', 'IBAN')">IBAN Kopyala</button>
+        </div>
+    </div>
+
+    <div class="bank-card">
+        <h3>Vakıfbank</h3>
+        <p>Alıcı: <span id="alici1">VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</span></p>
+        <p class="iban-text" id="iban1">TR04 0001 5001 5800 7306 7297 34</p>
+        
+        <div class="button-container">
+            <button class="btn-alici" onclick="kopyala('alici1', 'Alıcı Adı')">Alıcı Kopyala</button>
+            <button class="btn-iban" onclick="kopyala('iban1', 'IBAN')">IBAN Kopyala</button>
+        </div>
+    </div>
+
+    <div class="bank-card">
+        <h3>Ziraat</h3>
+        <p>Alıcı: <span id="alici1">VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</span></p>
+        <p class="iban-text" id="iban1">TR69 0001 0021 0739 2496 6250 15</p>
+        
+        <div class="button-container">
+            <button class="btn-alici" onclick="kopyala('alici1', 'Alıcı Adı')">Alıcı Kopyala</button>
+            <button class="btn-iban" onclick="kopyala('iban1', 'IBAN')">IBAN Kopyala</button>
+        </div>
+    </div>
+
+    <div class="bank-card">
+        <h3>Halkbank</h3>
+        <p>Alıcı: <span id="alici1">VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</span></p>
+        <p class="iban-text" id="iban1">TR86 0001 2009 7710 0010 0003 51</p>
+        
+        <div class="button-container">
+            <button class="btn-alici" onclick="kopyala('alici1', 'Alıcı Adı')">Alıcı Kopyala</button>
+            <button class="btn-iban" onclick="kopyala('iban1', 'IBAN')">IBAN Kopyala</button>
+        </div>
+    </div>
+
+    <div class="bank-card">
+        <h3>Garanti BBVA</h3>
+        <p>Alıcı: <span id="alici1">VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</span></p>
+        <p class="iban-text" id="iban1">TR25 0006 2000 1580 0006 2034 07</p>
+        
+        <div class="button-container">
+            <button class="btn-alici" onclick="kopyala('alici1', 'Alıcı Adı')">Alıcı Kopyala</button>
+            <button class="btn-iban" onclick="kopyala('iban1', 'IBAN')">IBAN Kopyala</button>
+        </div>
+    </div>
+
+    <div class="bank-card">
+        <h3>TEB</h3>
+        <p>Alıcı: <span id="alici1">VARDALLAR OTOMOTİV SAN.TİC.LTD.ŞTİ.</span></p>
+        <p class="iban-text" id="iban1">TR79 0003 2000 0000 0111 3570 21</p>
+        
+        <div class="button-container">
+            <button class="btn-alici" onclick="kopyala('alici1', 'Alıcı Adı')">Alıcı Kopyala</button>
+            <button class="btn-iban" onclick="kopyala('iban1', 'IBAN')">IBAN Kopyala</button>
+        </div>
     </div>
 
     <script>
-        function kopyala(elementId) {
+        function kopyala(elementId, bilgiTuru) {
             var kopyalanacakMetin = document.getElementById(elementId).innerText;
             navigator.clipboard.writeText(kopyalanacakMetin).then(function() {
-                alert("IBAN Kopyalandı: " + kopyalanacakMetin);
+                // Ekranda neyin kopyalandığını gösteren uyarı mesajı
+                alert(bilgiTuru + " başarıyla kopyalandı:\n" + kopyalanacakMetin);
             }, function(err) {
-                alert("Kopyalama başarısız oldu!");
+                alert("Kopyalama başarısız oldu, lütfen manuel kopyalayın.");
             });
         }
     </script>
